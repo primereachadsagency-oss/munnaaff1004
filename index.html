@@ -1,106 +1,398 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
-  <!-- Basic -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Master the Market – Beginner's Guide</title>
-  <meta name="description" content="100% free stock market education. Learn chart reading, technical analysis, and risk management. No buy/sell tips. For learning purpose only.">
-  <link rel="canonical" href="https://example.com/">
-
-  <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
-
-  <!-- Favicons (optional) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Master the Market – Beginner's Guide">
-  <meta property="og:description" content="Learn charts & risk management. No buy/sell tips. 100% educational.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop">
-
-  <!-- Minimal CSS (inline for speed) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRADE WITH MUNAAF</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
-    :root{
-      --bg1:#0c0c1d;
-      --bg2:#1a1a2b;
-      --brand: #ff6699;
-      --brand-2:#00f0ff;
-      --text:#ffffff;
-      --muted:#b5b5c3;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        linear-gradient(135deg, rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop') no-repeat center/cover fixed;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      min-height:100vh;
+
+    body {
+      background-color: #0d0404;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px 10px;
     }
-    .container{
-      max-width:520px; margin:0 auto; padding:24px 18px; text-align:center; min-height:100vh; display:flex; flex-direction:column; justify-content:center;
-      backdrop-filter: saturate(130%);
+
+    .card {
+      background: linear-gradient(180deg, #1f0b0a 0%, #140606 100%);
+      width: 100%;
+      max-width: 420px;
+      border-radius: 20px;
+      padding: 28px 20px;
+      border: 1px solid #3d1412;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      text-align: center;
+      color: #ffffff;
+      position: relative;
     }
-    .badge{display:inline-block; font-size:.78rem; padding:6px 10px; border:1px solid #2a2a3a; border-radius:999px; color:#d6eaff; background:rgba(0,240,255,.08); margin-bottom:14px}
-    h1{font-size:1.9rem; line-height:1.2; margin:6px 0 10px; background:linear-gradient(90deg,var(--brand-2),var(--brand)); -webkit-background-clip:text; background-clip:text; color:transparent;}
-    .sub{font-size:1rem; color:var(--muted); margin:0 auto 16px; max-width:36ch}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(0,255,153,.07); border:1px dashed rgba(0,255,153,.35); color:#d8ffe9; font-size:.9rem; margin:6px 0 18px;
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 3px;
+      background: linear-gradient(90deg, #f5a623, #d0021b);
+      border-radius: 3px 3px 0 0;
     }
-    ul.bullets{list-style:none; padding:0; margin:0 0 18px}
-    ul.bullets li{margin:8px 0; color:#e9eef9}
-    .cta{
-      display:inline-block; text-decoration:none; background:var(--brand); color:#041b14; padding:14px 18px; font-weight:700; border-radius:12px; box-shadow:0 0 0 0 rgba(0,255,153,.6); transform:translateZ(0);
-      transition:transform .15s ease;
-      animation:pulse 1.6s infinite;
+
+    .profile-img-container {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(180deg, #f39c12, #e74c3c);
     }
-    .cta:active{transform:scale(.98)}
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(0,255,153,.55)}
-      70%{box-shadow:0 0 0 20px rgba(0,255,153,0)}
-      100%{box-shadow:0 0 0 0 rgba(0,255,153,0)}
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #222;
     }
-    .fineprint{font-size:.86rem; color:var(--muted); margin:18px auto 0; max-width:44ch}
-    .disclaimer{font-size:.78rem; color:#9aa4b2; margin:18px auto 0; max-width:50ch}
-    .safe{display:flex; align-items:center; justify-content:center; gap:8px; margin-top:14px; color:#a1ffd6; font-size:.9rem}
-    .shield{width:18px; height:18px; display:inline-block; border-radius:4px; background:linear-gradient(135deg,#0df,#0f9)}
-    footer{opacity:.8; margin-top:22px; font-size:.78rem; color:#9aa4b2}
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid #734812;
+      background-color: rgba(30, 15, 10, 0.6);
+      color: #f39c12;
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .main-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      color: #ffffff;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: #cda882;
+      margin-bottom: 18px;
+    }
+
+    .tags-container {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .tag {
+      background-color: #1a0a09;
+      border: 1px solid #4a2114;
+      color: #f39c12;
+      font-size: 11px;
+      padding: 6px 10px;
+      border-radius: 15px;
+      font-weight: 600;
+    }
+
+    .tag span {
+      color: #ffffff;
+    }
+
+    .btn-telegram {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: linear-gradient(90deg, #e67e22 0%, #c0392b 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(211, 84, 0, 0.4);
+      margin-bottom: 20px;
+    }
+
+    .features-list {
+      text-align: left;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .feature-item {
+      font-size: 12px;
+      color: #d1c4b8;
+      display: flex;
+      align-items: center;
+    }
+
+    .feature-item::before {
+      content: "—";
+      color: #e67e22;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    .feature-item strong {
+      color: #ffffff;
+    }
+
+    /* Footer Links & Modals */
+    .footer-nav {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #3d1412;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .footer-btn {
+      background: none;
+      border: none;
+      color: #cda882;
+      font-size: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-btn:hover {
+      color: #f39c12;
+      text-decoration: underline;
+    }
+
+    .footer-copy {
+      font-size: 8px;
+      color: #6e5852;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+
+    /* Modal Backdrop & Box */
+    .modal-backdrop {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(4px);
+      z-index: 999;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #190908;
+      border: 1px solid #5a221a;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 380px;
+      padding: 20px;
+      color: #d1c4b8;
+      text-align: left;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.9);
+      position: relative;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #3d1412;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .modal-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #f39c12;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      color: #cda882;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .modal-body {
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .modal-body p {
+      margin-bottom: 8px;
+    }
   </style>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1632910984928426');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1632910984928426&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
-  <main class="container">
-    <span class="badge">100% Educational • Policy Safe</span>
-    <h1>Master the Market – Beginner's Guide</h1>
-    <p class="sub">Education only – no investment advice</p>
 
-    <div class="pill">🚫 No Buy/Sell Tips • ✅ For Learning Purpose Only</div>
+  <div class="card">
+    <div class="profile-img-container">
+      <img src="Munaaf.jpeg" alt="Trade With Munaaf" class="profile-img">
+    </div>
 
-    <ul class="bullets" aria-label="What you'll learn">
-      <li>• Chart basics & risk rules (no return promises)</li>
-      <li>• How to read trends without speculation</li>
-      <li>• Market discipline & common mistakes</li>
-    </ul>
+    <div class="badge">
+      <i class="fas fa-shield-alt"></i> ధృవీకరించబడిన COMMUNITY
+    </div>
 
-    <!-- CTA goes to a page-specific bridge -->
-    <a class="cta" href="bridge-lp75.html" rel="nofollow">Start Learning</a>
+    <h1 class="main-title">TRADE WITH MUNAAF</h1>
+    <p class="subtitle">స్టాక్ మార్కెట్ & Financial Trading Education</p>
 
-    <div class="safe"><span class="shield" aria-hidden="true"></span> Ad Policy Friendly Content</div>
+    <div class="tags-container">
+      <div class="tag">100% ప్రారంభకులకు</div>
+      <div class="tag">ప్రతిరోజు <span>Updates</span></div>
+      <div class="tag">ఉచితం <span>Access</span></div>
+    </div>
 
-    <p class="fineprint">We focus on concepts & frameworks suitable for beginners.</p>
-    <p class="disclaimer"><em>This website is for educational purposes only. We do not provide investment, trading, or financial advice.</em></p>
+    <!-- Updated Telegram Link -->
+    <a href="https://t.me/+CPFOJPh8BKNiMjA1" id="telegram-btn" onclick="trackSubscribe()" class="btn-telegram">
+      <i class="fab fa-telegram-plane"></i> Join Free Telegram Community
+    </a>
 
-    <footer>© <span id="y"></span> Market Basics Learning Hub</footer>
-  </main>
+    <div class="features-list">
+      <div class="feature-item">ప్రతిరోజు Market Updates & Insights</div>
+      <div class="feature-item">ఉచిత Educational Content, no hidden fees</div>
+      <div class="feature-item">ప్రారంభకులకు సులభమైన వివరణ</div>
+      <div class="feature-item">పూర్తి Active Community Support</div>
+    </div>
+
+    <!-- Footer Links Trigger Modals -->
+    <div class="footer-nav">
+      <button class="footer-btn" onclick="openModal('modal-about')">About Us</button> •
+      <button class="footer-btn" onclick="openModal('modal-terms')">Terms & Conditions</button> •
+      <button class="footer-btn" onclick="openModal('modal-disclaimer')">Disclaimer</button> •
+      <button class="footer-btn" onclick="openModal('modal-contact')">Contact Us</button>
+    </div>
+
+    <div class="footer-copy">
+      This site is not part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way.
+    </div>
+  </div>
+
+  <!-- POPUP MODALS -->
+  <div id="modal-backdrop" class="modal-backdrop" onclick="closeModals()">
+    
+    <!-- About Us Modal -->
+    <div id="modal-about" class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <span class="modal-title">About Us</span>
+        <button class="modal-close" onclick="closeModals()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>TRADE WITH MUNAAF</strong> కు స్వాగతం.</p>
+        <p>మేము ప్రధానంగా స్టాక్ మార్కెట్, ట్రేడింగ్ టెక్నికల్స్, మరియు ఫైనాన్షియల్ ఎడ్యుకేషన్ పై నాలెడ్జ్ అందించడానికి ఈ కమ్యూనిటీని ప్రారంభించాము.</p>
+        <p>మార్కెట్ పరిజ్ఞానాన్ని ప్రారంభకులకు సులభంగా అర్థమయ్యే రీతిలో నేర్పించడమే మా ముఖ్య ఉద్దేశం.</p>
+      </div>
+    </div>
+
+    <!-- Terms & Conditions Modal -->
+    <div id="modal-terms" class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <span class="modal-title">Terms & Conditions</span>
+        <button class="modal-close" onclick="closeModals()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <p>1. ఈ ప్లాట్‌ఫారమ్‌లో లభించే ప్రతి అంశం విద్య మరియు సమాచార ప్రయోజనాల కోసం మాత్రమే.</p>
+        <p>2. Telegram ఛానెల్‌లో చేరడం పూర్తి ఉచితం.</p>
+        <p>3. ఇక్కడ అందించే నాలెడ్జ్‌ను ఉపయోగించి మీరు తీసుకునే ట్రేడింగ్ నిర్ణయాలకు మీరే స్వయంగా బాధ్యులు.</p>
+      </div>
+    </div>
+
+    <!-- Disclaimer Modal -->
+    <div id="modal-disclaimer" class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <span class="modal-title">Disclaimer</span>
+        <button class="modal-close" onclick="closeModals()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <p>Disclaimer: ఈ platform కేవలం educational మరియు informational objectives కోసం మాత్రమే. ఇది ఏ విధమైన financial advice కాదు మరియు ఏ లాభాలకు హామీ ఇవ్వదు.</p>
+        <p>Stock market investments carry risk — ఏదైనా నిర్ణయం తీసుకునే ముందు దయచేసి మీ స్వంత research చేసుకోండి. మేము SEBI రిజిస్టర్డ్ అడ్వైజర్లు కాము.</p>
+      </div>
+    </div>
+
+    <!-- Contact Us Modal -->
+    <div id="modal-contact" class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <span class="modal-title">Contact Us</span>
+        <button class="modal-close" onclick="closeModals()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <p>మీకు ఏవైనా ప్రశ్నలు ఉంటే మమ్మల్ని సంప్రదించండి:</p>
+        <p style="margin-top: 8px;">📧 <strong>Email:</strong> support@tradewithmunaaf.com</p>
+        <p>✈️ <strong>Telegram:</strong> Direct Community Helpdesk</p>
+      </div>
+    </div>
+
+  </div>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    // Pixel Subscribe Event
+    function trackSubscribe() {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Subscribe');
+      }
+    }
+
+    // Modal Control Script
+    function openModal(modalId) {
+      document.getElementById('modal-backdrop').classList.add('active');
+      document.querySelectorAll('.modal-box').forEach(box => box.style.display = 'none');
+      document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeModals() {
+      document.getElementById('modal-backdrop').classList.remove('active');
+      document.querySelectorAll('.modal-box').forEach(box => box.style.display = 'none');
+    }
   </script>
+
 </body>
 </html>
